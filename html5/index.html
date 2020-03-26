@@ -3,10 +3,13 @@
     <head>
         <title>Practice</title>
         <meta charset="utf-8">
+        
+        <!-- 外部css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     </head>
     <body>
-        <h1>FullStack Practice</h1>
+        <h1 class = "main" id="top">FullStack Practice</h1>
         <p>strong<strong>タグ推奨</strong></p>
         <p><em>イタリック</em>はemで記述</p>
         <p><ins>下線</ins>はinsで記述</p>
@@ -14,21 +17,51 @@
         <p><sub>下付き文字は</sub>sub</p>
         <p><del>打ち消し線</del>はdel</p>
         <hr>
-        <ol start="10">
-            <li>test</li>
-            <li>test2</li>
-            <li><strong>test3</strong></li>
-        </ol>
-        <ol reversed>
-            <li>test</li>
-            <li>test2</li>
-            <li><strong>test3</strong></li>
-        </ol>
-        <ol type="I">
-            <li>test</li>
-            <li>test2</li>
-            <li><strong>test3</strong></li>
-        </ol>
+
+        <!-- youtube -->
+        <div class="container_youtube">
+            <div class="youtube_box">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/90DK7oWNij8" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="youtube_box">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/kbjAThDV6vk" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+            <div class="youtube_box">
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/QEEorls0ApE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        
+        <!-- or等 -->
+        <div class="container_or">
+            <div class="or_box">
+                <ol class="ol1" start="10">
+                    <li class="li_text">test</li>
+                    <li>test2</li>
+                    <li><strong>test3</strong></li>
+                </ol>
+            </div>
+            <div class="or_box">
+                <ol class="ol2" reversed>
+                    <li>test</li>
+                    <li>test2</li>
+                    <li><strong>test3</strong></li>
+                </ol>
+            </div>
+            <div class="or_box">
+                <ol class="ol3" type="I">
+                    <li>test</li>
+                    <li>test2</li>
+                    <li><strong>test3</strong></li>
+                </ol>
+            </div>
+        </div>
+        
         <img src="Homer.png">
         <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png">
         <form>
@@ -47,6 +80,11 @@
         <p>
             <a href="http://google.com">googleへ</a>
         </p>
+        <p>エンティティ</p>
+        &lt;a href=http://google.com>
+        <p>&copy;</p>
+
+        <p><a href="#top">TOPへ</a></p>
         <table border="1">
             <thead>
                 <tr>
