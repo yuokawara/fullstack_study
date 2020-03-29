@@ -7,11 +7,27 @@ body {
     font-size: 100px;
     font-weight: bold;
 }
+.position_title {
+    z-index: 3;
+    opacity: 0.1;
+    position: fixed;
+    top: 150px;
+    left: 100px;
+}
+
+.position_maintitle {
+    font-size: 200px;
+    text-align: center;
+}
 
 .container_or {
     background-color: aqua;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 50%;
+    height: 200px;
 }
 .ol1 {
     color: chocolate;
@@ -34,4 +50,54 @@ body {
 
 .youtube_box {
     margin: 0.5rem;
+}
+
+.image_section {
+    float: right;
+    background-color: cornsilk;
+    margin-top: 5px;
+    width: 50%;
+    display: flex;
+}
+#img_01 {
+    background-color: greenyellow;
+    text-align: center;
+    width: 50%;
+    margin-right: 5px;
+}
+#img_02 {
+    background-color: coral;
+    text-align: center;
+    width: 50%;
+}
+
+/* float一時解除 */
+.clear_section {
+    clear: both;
+}
+
+.form_section {
+    background-color: lightcyan;
+    width: 200px;
+}
+
+.table_section {
+    background-color: silver;
+    width: 200px;
+    float: right;
+    margin: 5px 5px;
+}
+
+.position_section {
+    background-color: darksalmon;
+}
+
+#img_03 {
+    padding-top: 10px;
+    z-index: 1;
+    
+}
+#img_04 {
+    opacity: 0.7;
+    z-index: 2;
 }
