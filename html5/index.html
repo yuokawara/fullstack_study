@@ -13,7 +13,14 @@
         <div class="position_title">
             <h1 class="position_maintitle">働いたら負け</h1>
         </div>
-        <p>strong<strong>タグ推奨</strong></p>
+        <p id="text">strong<strong>タグ推奨</strong></p>
+        <button id="myButton">チェンジ</button>
+        <script type="text/javascript">
+            document.getElementById("myButton").onclick = function() {
+                // alert("ボタン押されたよー");
+                document.getElementById("text").innerHTML = "クリックされたよー";
+            }
+        </script>
         <p><em>イタリック</em>はemで記述</p>
         <p><ins>下線</ins>はinsで記述</p>
         <p><sup>上付き文字は</sup>supで記述</p>
