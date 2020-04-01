@@ -21,8 +21,25 @@
                 document.getElementById("text").innerHTML = "クリックされたよー";
             }
         </script>
-        <p><em>イタリック</em>はemで記述</p>
-        <p><ins>下線</ins>はinsで記述</p>
+        <p id="secondTxt"><em>イタリック</em>はemで記述</p>
+        <button id="secondButton">追加だよ</button>
+        <script type="text/javascript">
+            document.getElementById("secondButton").onclick = function() {
+                // document.getElementById("secondTxt").innerHTML  = 
+                // document.getElementById("secondTxt").innerHTML + "追加されたよー";
+
+                // 文字列追記
+                document.getElementById("secondTxt").innerHTML += "追加されたよー";
+            }
+        </script>
+        <p id="styleChange"><ins>下線</ins>はinsで記述</p>
+        <button id="changeButton">スタイル変更</button>
+        <script type="text/javascript">
+            document.getElementById("changeButton").onclick = function() {
+                // document.getElementById("styleChange").style.color = "blue";
+                document.getElementById("styleChange").style.display = "none";
+            }
+        </script>
         <p><sup>上付き文字は</sup>supで記述</p>
         <p><sub>下付き文字は</sub>sub</p>
         <p><del>打ち消し線</del>はdel</p>
@@ -82,6 +99,12 @@
                 <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png">
             </div>
         </div>
+        <button id="imgChange">ホーマーを消す！！</button>
+        <script type="text/javascript">
+            document.getElementById("imgChange").onclick = function() {
+                document.getElementById("img_01").style.display = "none";
+            }
+        </script>
 
         <!-- float要素クリア -->
         <div class="clear_section"></div>
@@ -102,6 +125,16 @@
                     <input type="submit">
                 </p>
             </form>
+            <p><input type="text" id="inputForm"></p>
+            <p id="newMessage"></p>
+            <button id="submitButton">click!</button>
+            <script type="text/javascript">
+                document.getElementById("submitButton").onclick = function() {
+                    var name = "";
+                    name = document.getElementById("inputForm").value;
+                    document.getElementById("newMessage").innerHTML = name + "働いたら負けかな？"
+                }
+            </script>
         </div>
 
         <!-- table要素 -->
