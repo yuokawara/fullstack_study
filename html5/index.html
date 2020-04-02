@@ -10,6 +10,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
+        <script type="text/javascript">
+            var regex = /is/;
+            var string = "regex is great";
+            var result = string.match(regex);
+            alert(result);
+        </script>
+        
         <h1 class = "main" id="top">FullStack Practice</h1>
         <div class="position_title">
             <h1 class="position_maintitle">働いたら負け</h1>
@@ -40,12 +47,12 @@
                         $("p").fadeIn();
                     } else {
                         $("p").fadeOut();
-                    }
+                    };
                 });
         </script>
         
         <!-- youtube -->
-        <div class="container_youtube">
+        <div class="container_youtube" id="youtubeAnime">
             <div class="youtube_box">
                 <iframe width="420" height="315" src="https://www.youtube.com/embed/90DK7oWNij8" frameborder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -62,6 +69,14 @@
                 </iframe>
             </div>
         </div>
+        <button id="animeButton">アニメーション</button>
+        <script type="text/javascript">
+            $("#animeButton").click(function(){
+                $("#youtubeAnime").animate(
+                    {height: "toggle", opacity: "toggle"}, 3000
+                );
+            });
+        </script>
         <hr>
 
         <!-- or等 -->
@@ -155,7 +170,7 @@
         <hr>
 
         <!-- position test -->
-        <div class="position_section">
+        <div class="position_section" id="slide">
             <div id="img_03">
                 <img src="neko.jpeg">
             </div>
@@ -163,11 +178,22 @@
                 <img src="tonio.jpeg">
             </div>
         </div>
+        <button id="slideAnime">スライドのアニメーション</button>
+        <script type="text/javascript">
+            jQuery.extend(jQuery.easing,
+                    {
+                        easeInQuart: function (x, t, b, c, d) {
+                            return c * (t /= d) * t * t * t + b;
+                        },
+                    });
+            $("#slideAnime").click(function(){
+                $("#slide").animate(
+                    {width: "toggle", opacity: "toggle"}, 2000, "easeInQuart"
+                );
+            });
+        </script>
 <hr>
-
-        <p>
-            <a href="http://google.com">googleへ</a>
-        </p>
+        <p><a href="http://google.com">googleへ</a></p>
         <p>エンティティ</p>
         &lt;a href=http://google.com&gt;
         <p>&copy;</p>
