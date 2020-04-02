@@ -7,6 +7,7 @@
         <!-- 外部css -->
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="JS/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
         <h1 class = "main" id="top">FullStack Practice</h1>
@@ -23,7 +24,26 @@
         <p><sub>下付き文字は</sub>sub</p>
         <p><del>打ち消し線</del>はdel</p>
         <hr>
-
+        <script type="text/javascript">
+            // $("#text").hover(function(){
+            //     $("p").html("クリックされたよー");
+            // });
+            $("#myButton").click(function(){
+                $("#text").css("font-size", "30px");
+                $("p").fadeOut();
+            });
+            $("#secondButton").click(function () {
+                $("p").fadeIn();
+                });
+            $("#changeButton").click(function () {
+                    if($("p").css("display") == "none"){
+                        $("p").fadeIn();
+                    } else {
+                        $("p").fadeOut();
+                    }
+                });
+        </script>
+        
         <!-- youtube -->
         <div class="container_youtube">
             <div class="youtube_box">
@@ -149,7 +169,7 @@
             <a href="http://google.com">googleへ</a>
         </p>
         <p>エンティティ</p>
-        &lt;a href=http://google.com>
+        &lt;a href=http://google.com&gt;
         <p>&copy;</p>
         <p><a href="#top">TOPへ</a></p>
     </body>

@@ -4,6 +4,9 @@
      // alert("ボタン押されたよー");
      document.getElementById("text").innerHTML = "クリックされたよー";
  }
+ $("#text").click(function () {
+     alert("クリックされたよー");
+ })
 
  document.getElementById("secondButton").onclick = function () {
     // document.getElementById("secondTxt").innerHTML  = 
