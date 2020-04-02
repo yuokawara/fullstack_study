@@ -6,31 +6,47 @@
         
         <!-- 外部css -->
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
         <script type="text/javascript" src="JS/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+
     </head>
     <body>
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             var regex = /is/;
             var string = "regex is great";
             var result = string.match(regex);
             alert(result);
-        </script>
-        
+        </script> -->
+
         <h1 class = "main" id="top">FullStack Practice</h1>
         <div class="position_title">
             <h1 class="position_maintitle">働いたら負け</h1>
         </div>
-        <p id="text">strong<strong>タグ推奨</strong></p>
+
+        <div id="accordion">
+            <h3>section1</h3>
+            <div><p id="text">strong<strong>タグ推奨</strong></p></div>
+            <h3>section2</h3>
+            <div><p id="secondTxt"><em>イタリック</em>はemで記述</p></div>
+            <h3>section3</h3>
+            <div><p id="styleChange"><ins>下線</ins>はinsで記述</p></div>
+            <h3>section4</h3>
+            <div><p><sup>上付き文字は</sup>supで記述</p></div>
+            <h3>section5</h3>
+            <div><p><sub>下付き文字は</sub>sub</p></div>
+            <h3>section6</h3>
+            <div><p><del>打ち消し線</del>はdel</p></div>
+        </div>
         <button id="myButton">チェンジ</button>
-        <p id="secondTxt"><em>イタリック</em>はemで記述</p>
         <button id="secondButton">追加だよ</button>
-        <p id="styleChange"><ins>下線</ins>はinsで記述</p>
         <button id="changeButton">スタイル変更</button>
-        <p><sup>上付き文字は</sup>supで記述</p>
-        <p><sub>下付き文字は</sub>sub</p>
-        <p><del>打ち消し線</del>はdel</p>
         <hr>
+        <script type="text/javascript">
+            $("#accordion").accordion();
+        </script>
+
         <script type="text/javascript">
             // $("#text").hover(function(){
             //     $("p").html("クリックされたよー");
@@ -50,7 +66,18 @@
                     };
                 });
         </script>
-        
+
+        <!-- sort -->
+        <ul id="sortable">
+            <li>sushi</li>
+            <li>sukiyaki</li>
+            <li>tenpura</li>
+            <li>onigiri</li>
+        </ul>
+        <hr>
+        <script type="text/javascript">
+            $("#sortable").sortable();
+        </script>
         <!-- youtube -->
         <div class="container_youtube" id="youtubeAnime">
             <div class="youtube_box">
@@ -105,6 +132,9 @@
         </div>
 
         <!-- img要素 -->
+        <div class="droparea" id="drop">
+            <p id="dropMess">ドロップしてください</p>
+        </div>
         <div class="image_section">
             <div id="img_01">
                 <img src="Homer.png">
@@ -115,7 +145,18 @@
         </div>
         <div class="clear_section"></div>
         <p><button id="imgChange">ホーマーを消す！！</button></p>
-        
+        <script type="text/javascript">
+            $("#img_01").draggable();
+            $("#drop").droppable({
+                drop: function(event, ui){
+                    $(this)
+                    .addClass("ui-state-highlight")
+                    .find("#dropMess").html("ドロップ完了");
+                }
+            });
+            $("#img_01").resizable({ alsoResize: "#img_02" });
+            $("#img_02").draggable({ axis: "x" });
+        </script>
         <!-- float要素クリア -->
         <div class="clear_section"></div>
         <hr>
