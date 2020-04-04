@@ -1,0 +1,14 @@
+body {
+    background-color: #efefef;
+}
+
+.jumbotron {
+    height: 760px;
+    background-image: url('../img/spring01.jpeg');
+    background-size: cover;
+    color: aliceblue;
+}
+
+.card {
+    width: 18rem;
+}
